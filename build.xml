@@ -1,7 +1,18 @@
-<project name="CSVReader" default="distribute">
+<project name="CSVReader" default="documentation">
 	<target name="distribute" depends="build">
 		<jar jarfile="CSVReader.jar" basedir="build"/>
 	</target>
+
+    <target name="documentation">
+
+        <mkdir dir="docs"/>
+        <!-- Add information here as necessary. -->
+        <javadoc 
+            packagenames="*" 
+            sourcepath="."
+            destdir="docs">
+        </javadoc> 
+    </target>
 
 	<target name="build">
 		<mkdir dir="build"/>
